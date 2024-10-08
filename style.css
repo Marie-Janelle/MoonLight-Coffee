@@ -1,0 +1,377 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/coffee for free.jfif');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contain {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/black.jfif');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.containers {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/beans.jfif');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: gray;
+}
+
+.con {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: gray;
+}
+
+:root {
+    --bg-color: black;
+    --main-color: black;
+    --text-color: #333;
+}
+
+.contact {
+    background-color: var(--bg-color);  
+}
+
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem; /* Add spacing between input elements */
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form .btn:hover {
+    background-color: black; /* Manually darkened color */
+}
+
+@media (max-width: 600px) {
+    .contact form {
+        padding: 0 1rem;
+    }
+
+    .input-box input {
+        width: 100%;
+    }
+}
+
+
+h1-1 {
+    color: var( --main-color);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+h2-2 {
+    color: var( --main-color);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+    position: relative;
+}
+
+.nav-bar .title {
+    color: #fff;
+    font-size: 67px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+span {
+    color:  #bc9667;
+}
+
+.nav-bar p {
+    position: absolute;
+    margin-top: 90px;
+    margin-left: 50px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+    margin-left: 25px;
+    transition: .4s ease;
+}
+
+.menu li a:hover {
+    color:  #bc9667;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+}
+
+/* Hamburger icon */
+.icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Media Query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 70px; /* Adjust based on your layout */
+        left: 0;
+        text-align: center;
+    }
+
+    .menu li {
+        display: block;
+        margin: 20px 0;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .nav-bar {
+        padding: 20px 40px;
+    }
+}
+
+/* Show the menu when it's toggled */
+@media screen and (max-width: 768px) {
+    .menu.show {
+        display: flex;
+    }
+}
+
+.home {
+    height: 400px;
+    padding: 70px;
+}
+
+.title-1 {
+    font-size: 56px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.home p {
+    color: lemonchiffon;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.home button {
+    height: 40px;
+    color: #fff;
+    background: var( --main-color);
+    font-size: 22px;
+    padding: 5px 30px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    transition: .4s ease;
+    cursor: pointer;
+}
+
+.home button:hover {
+    background: none;
+    border: 2px solid  #bc9667;
+}
+
+
+:root {
+    --main-color: #bc9667;
+    --second-color: #eCdeae3;
+    --text-color: #1b1b1b;
+    --bg-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.coffee-section {
+    text-align: center;
+    color: white;
+}
+
+.coffee-section h1 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* This allows cards to wrap on smaller screens */
+}
+
+.card {
+    background-color: #bc9667;
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    margin: 20px; /* Add space between the cards */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-content {
+    opacity: 1;
+}
+
+.card h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.card p {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: #bc9667;
+}
+
+.customers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Corrected auto value to 1fr */
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.customers-container .box {
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Example shadow */
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: #fff; /* Added background for contrast */
+}
+
+.stars {
+    color: gold; /* Add color for stars */
+}
+
+img {
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+}
+

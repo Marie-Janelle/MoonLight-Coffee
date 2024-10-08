@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>CUSTOMER REVIEWS</title>
+</head>
+<body>
+    <div class="containers">
+        <div class="nav-bar" id="navbar">
+            <h1 class="title">Moon<span>Light</span></h1>
+            <p>Coffee Shop</p>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="PRODUCTS.html">PRODUCTS</a></li>
+                <li><a href="CUSTOMER REVIEWS.html">CUSTOMERS REVIEWS</a></li>
+                <li><a href="CONTACT US.html">CONTACT US</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"> 
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        
+        <div class="heading">
+            <br>
+            <br>
+            <center><h2-2>OUR CUSTOMER'S REVIEWS</h2-2></center>
+        </div>
+
+        <!-- Customers container -->
+        <div class="customers-container">
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i>  
+                </div>
+                <p>Very good, Excellent</p>
+                <h2>Marie Janelle</h2>
+                <img src="images/pp.jfif" alt="anon1" />
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i>  
+                </div>
+                <p>Great service and taste!</p>
+                <h2>Janelle</h2>
+                <img src="images/pp.jfif" alt="anon2" />
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i> 
+                    <i class="fas fa-star"></i>  
+                    <i class="fas fa-star"></i>  
+                </div>
+                <p>Would definitely recommend!</p>
+                <h2>Marie</h2>
+                <img src="images/pp.jfif" alt="anon3" />
+            </div>
+        </div>
+        
+        <script>
+            function toggleMenu() {
+                var menu = document.getElementById("menu");
+                if (menu.style.display === "block") {
+                    menu.style.display = "none";
+                } else {
+                    menu.style.display = "block";
+                }
+            }
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState === 'visible') {
+        location.reload(); // Refresh the page
+      }
+    });
+        </script>
+    </div>
+</body>
+</html>
+

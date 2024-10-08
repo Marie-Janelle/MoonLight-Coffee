@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Moonlight Coffee</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-bar" id="navbar">
+        <h1 class="title">Moon<span>Light</span></h1>
+
+        <p>Coffee Shop</p>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="PRODUCTS.html">PRODUCTS</a></li>
+          <li><a href="CUSTOMER REVIEWS.html">CUSTOMERS REVIEWS</a></li>
+          <li><a href="CONTACT US.html">CONTACT US</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <div class="home">
+        <h1 class="title-1">
+          Never trust anyone<br /> who doesn't drink <span>coffee</span>
+        </h1>
+        <b><p>We provide a variety of unique and best coffees</p></b>
+        <br />
+        <br />
+
+        <p>Click to play or pause the music</p>
+
+        <button class="explore-btn" id="playPauseBtn" onclick="toggleAudio()">
+          Play Music
+        </button>
+      </div>
+
+      <!-- Hidden Audio Element -->
+      <audio id="background-music" autoplay loop>
+        <source src="Parisian Cafe - Aaron Kenny.mp3" type="audio/mp3" />
+      </audio>
+    </div>
+
+    <script>
+      // Play/Pause Audio
+      let isPlaying = false;
+      const audio = document.getElementById('background-music');
+      const playPauseBtn = document.getElementById('playPauseBtn');
+
+      // Automatically play when the page loads
+      window.onload = function () {
+        audio.play();
+        isPlaying = true;
+        playPauseBtn.textContent = 'Pause Music';
+      };
+
+      // Toggle audio play/pause
+      function toggleAudio() {
+        if (isPlaying) {
+          audio.pause();
+          playPauseBtn.textContent = 'Play Music';
+        } else {
+          audio.play();
+          playPauseBtn.textContent = 'Pause Music';
+        }
+        isPlaying = !isPlaying;
+      }
+
+      // Persist music state across page navigations
+      document.addEventListener('DOMContentLoaded', function () {
+        const savedAudioState = localStorage.getItem('audioPlaying');
+        if (savedAudioState === 'true') {
+          audio.play();
+          isPlaying = true;
+          playPauseBtn.textContent = 'Pause Music';
+        }
+      });
+
+      window.onbeforeunload = function () {
+        localStorage.setItem('audioPlaying', isPlaying);
+      };
+
+      // Toggle menu
+      function toggleMenu() {
+        var menu = document.getElementById('menu');
+        if (menu.style.display === 'block') {
+          menu.style.display = 'none';
+        } else {
+          menu.style.display = 'block';
+        }
+      }
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState === 'visible') {
+        location.reload(); // Refresh the page
+      }
+    });
+    </script>
+
+
+  </body>
+</html>

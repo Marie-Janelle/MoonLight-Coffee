@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>PRODUCT</title>
+</head>
+<body>
+    <div class="contain">
+        <div class="nav-bar" id="navbar">
+            <h1 class="title">Moon<span>Light</span></h1>
+            <p>Coffee Shop</p>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="PRODUCTS.html">PRODUCTS</a></li>
+                <li><a href="CUSTOMER REVIEWS.html">CUSTOMERS REVIEWS</a></li>
+                <li><a href="CONTACT US.html">CONTACT US</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"> 
+                <i class="fa fa-bars"></i>
+            </a>
+
+            
+        </div>
+
+        <div class="coffee-section">
+            <br>
+            <br>
+            <h1-1>OUR PRODUCTS</h1-1>
+            <br>
+            <br>
+            <br>
+            <h1>Coffees</h1>
+            <div class="card-container">
+                <div class="card">
+                    <img src="images/Espresso.png" alt="Espresso">
+                    <div class="card-content">
+                        <h2>Espresso</h2>
+                        <p>A rich and concentrated coffee brewed by forcing hot water through finely-ground coffee beans. It's the base for many other coffee drinks like cappuccino and latte.</p>
+                        <i class="fas fa-coffee icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/AMERICANO.png" alt="Americano">
+                    <div class="card-content">
+                        <h2>Americano</h2>
+                        <p>An espresso shot diluted with hot water, creating a coffee that’s less intense than espresso but still full of flavor.</p>
+                        <i class="fas fa-coffee icon"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="images/coffee_latte_cup-removebg-preview.png" alt="Latte">
+                    <div class="card-content">
+                        <h2>Latte</h2>
+                        <p>A creamy coffee made with espresso and steamed milk, typically topped with a small amount of foam. It has a smooth, mellow flavor.</p>
+                        <i class="fas fa-coffee icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <img src="images/Cappuccino-removebg-preview.png" alt="Cappuccino">
+                <div class="card-content">
+                    <h2>Cappuccino</h2>
+                    <p>A balanced drink made with equal parts espresso, steamed milk, and milk foam. Cappuccinos are slightly stronger than lattes, with a rich and bold taste.</p>
+                    <i class="fas fa-coffee icon"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/Homemade_Iced_Caramel_Macchiato_inspired_by_Starbucks-removebg-preview.png" alt="Macchiato">
+                <div class="card-content">
+                    <h2>Macchiato</h2>
+                    <p>An espresso "stained" with a small amount of foamed milk, resulting in a stronger, more intense coffee flavor.</p>
+                    <i class="fas fa-coffee icon"></i>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/Mocha_recipe-removebg-preview.png" alt="Mocha">
+                <div class="card-content">
+                    <h2>Mocha</h2>
+                    <p>A latte with chocolate syrup or cocoa powder added, combining the sweetness of chocolate with the rich flavor of coffee. It's perfect for those with a sweet tooth.</p>
+                    <i class="fas fa-coffee icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState === 'visible') {
+        location.reload(); // Refresh the page
+      }
+    });
+    </script>
+    
+</body>
+</html>

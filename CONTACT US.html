@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>CONTACT US</title>
+</head>
+<body>
+    <div class="con">
+        <div class="nav-bar" id="navbar">
+            <h1 class="title">Moon<span>Light</span></h1>
+            <p>Coffee Shop</p>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="PRODUCTS.html">PRODUCTS</a></li>
+                <li><a href="CUSTOMER REVIEWS.html">CUSTOMERS REVIEWS</a></li>
+                <li><a href="CONTACT US.html">CONTACT US</a></li>
+            </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"> 
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+        <!-- Add the contact container -->
+        <div class="contact">
+            <br>
+            <br>
+            <center><h1 class="heading">CONTACT <span>  US </span></h1></center>
+            <form action="#">
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Phone Number" required>
+                    <input type="text" placeholder="Subject" required>
+                </div>
+                <textarea cols="30" rows="10" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </div>
+
+        <script>
+            function toggleMenu() {
+                var menu = document.getElementById("menu");
+                if (menu.style.display === "block") {
+                    menu.style.display = "none";
+                } else {
+                    menu.style.display = "block";
+                }
+            }
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState === 'visible') {
+        location.reload(); // Refresh the page
+      }
+    });
+        </script>
+    </div>
+</body>
+</html>
+
