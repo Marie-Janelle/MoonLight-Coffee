@@ -56,9 +56,12 @@
 
       // Automatically play when the page loads
       window.onload = function () {
-        audio.play();
-        isPlaying = true;
-        playPauseBtn.textContent = 'Pause Music';
+        const savedAudioState = localStorage.getItem('audioPlaying');
+        if (savedAudioState === 'true') {
+          audio.play();
+          isPlaying = true;
+          playPauseBtn.textContent = 'Pause Music';
+        }
       };
 
       // Toggle audio play/pause
@@ -71,21 +74,8 @@
           playPauseBtn.textContent = 'Pause Music';
         }
         isPlaying = !isPlaying;
-      }
-
-      // Persist music state across page navigations
-      document.addEventListener('DOMContentLoaded', function () {
-        const savedAudioState = localStorage.getItem('audioPlaying');
-        if (savedAudioState === 'true') {
-          audio.play();
-          isPlaying = true;
-          playPauseBtn.textContent = 'Pause Music';
-        }
-      });
-
-      window.onbeforeunload = function () {
         localStorage.setItem('audioPlaying', isPlaying);
-      };
+      }
 
       // Toggle menu
       function toggleMenu() {
@@ -96,13 +86,7 @@
           menu.style.display = 'block';
         }
       }
-    document.addEventListener("visibilitychange", function() {
-      if (document.visibilityState === 'visible') {
-        location.reload(); // Refresh the page
-      }
-    });
     </script>
-
-
   </body>
 </html>
+
